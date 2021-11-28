@@ -1,7 +1,9 @@
-package com.test;
+package com.test.meta_annotations;
 
-import com.test.config.Fast;
-import com.test.config.FastTest;
+import com.test.Calculator;
+import com.test.Person;
+import com.test.meta_annotations.config.Fast;
+import com.test.meta_annotations.config.FastTest;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
@@ -14,26 +16,6 @@ class CalculatorTest {
 
     private final Calculator calculator = new Calculator();
     private final Person person = new Person("Jane", "Doe");
-
-    @BeforeAll
-    static void setupAll() {
-        System.out.println("setupAll");
-    }
-
-    @BeforeEach
-    void setUp() {
-        System.out.println("setup");
-    }
-
-    @AfterEach
-    void tearDown() {
-        System.out.println("teardown");
-    }
-
-    @AfterAll
-    static void tearDownAll() {
-        System.out.println("tearDownAll");
-    }
 
     @FastTest
     void add() {

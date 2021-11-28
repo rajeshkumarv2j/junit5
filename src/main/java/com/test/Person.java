@@ -2,8 +2,8 @@ package com.test;
 
 public class Person {
 
-    private String firstName;
-    private String lastName;
+    private String firstName = "Jane";
+    private String lastName = "Doe";
 
     public Person(String jane, String doe) {
         firstName = jane;
